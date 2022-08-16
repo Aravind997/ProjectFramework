@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectFrameworkMob.ViewContents.BurgerMenuView">
+  <ContentView.Content>
+        <Grid HorizontalOptions="Fill" VerticalOptions="Fill">
+            <Grid RowSpacing="0" BackgroundColor="#017D8C">
+                
+                <Grid Grid.Row="0" Margin="0,0,0,0" RowSpacing="0" 
+                      VerticalOptions="Fill" HorizontalOptions="Fill" BackgroundColor="#017D8C">
+                   
+                    <Image Grid.Row="1" Margin="20,0,0,0" Source="Logo_burger_menu.png" Aspect="AspectFit" HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="Transparent" />
+                    <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,5,0,0" Text="Project Framework" FontSize="16" TextColor="#F8F8F8" HorizontalOptions="Start" VerticalOptions="Start" BackgroundColor="Transparent" />
+                </Grid>
+                <Grid Grid.Row="1" RowSpacing="0" VerticalOptions="Fill" HorizontalOptions="Fill" BackgroundColor="#F8F8F8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="20*" />
+                        <RowDefinition Height="20*" />
+                    </Grid.RowDefinitions>
+                    <Grid x:Name="gridHome" Grid.Row="1" BackgroundColor="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20*" />
+                            <ColumnDefinition Width="60*" />
+                            <ColumnDefinition Width="20*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="tapHome" Tapped="tapHome_Tapped" />
+                        </Grid.GestureRecognizers>
+                        <Image Grid.Row="0" Grid.Column="0" Source="burger_home.png" VerticalOptions="Fill" HorizontalOptions="Fill" Margin="10,10,10,10" BackgroundColor="Transparent" Aspect="AspectFit" />
+                        <Label Grid.Row="0" Grid.Column="1" Text="Home" VerticalTextAlignment="Center" BackgroundColor="Transparent" FontSize="18" TextColor="#017D8C" Margin="0,0,0,0" />
+                        <BoxView Grid.ColumnSpan="3" Margin="20,0,20,0" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" BackgroundColor="#E0E3E8" />
+                    </Grid>
+                    
+                    <Grid Grid.Row="2" BackgroundColor="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20*" />
+                            <ColumnDefinition Width="60*" />
+                            <ColumnDefinition Width="20*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="tapAboutApp" Tapped="tapAboutApp_Tapped" />
+                        </Grid.GestureRecognizers>
+                        <Image Grid.Row="0" Grid.Column="0" Source="burger_about_app.png" VerticalOptions="Fill" HorizontalOptions="Fill" Margin="10,10,10,10" BackgroundColor="Transparent" Aspect="AspectFit" />
+                        <Label Grid.Row="0" Grid.Column="1" Text="About" VerticalTextAlignment="Center" BackgroundColor="Transparent" FontSize="18" TextColor="#017D8C" Margin="0,0,0,0" />
+                    </Grid>
+                    <Grid Grid.Row="9" BackgroundColor="Transparent" />
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

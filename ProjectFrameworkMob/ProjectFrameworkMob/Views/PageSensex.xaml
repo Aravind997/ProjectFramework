@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewcontents="clr-namespace:ProjectFrameworkMob.ViewContents"
+             mc:Ignorable="d"
+             x:Class="ProjectFrameworkMob.Views.PageSensex">
+    
+    <ContentPage.Content>
+        <Frame  CornerRadius="10" HasShadow="True"  VerticalOptions="Start" >
+            <StackLayout>
+            <Label Text="Update Your Portfolio "  FontSize="Large"   VerticalOptions="Fill" HorizontalOptions="Center" FontAttributes="Bold" FontFamily="Roboto" x:Name="lblHeading" />
+            <Frame Padding="10,5" HasShadow="True"   CornerRadius="5"  BorderColor="Wheat" Margin="0,10,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50">
+
+                        </RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30">
+
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="40">
+
+                        </ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Person.png" Scale="0.6" ></Image>
+                    <Entry Grid.Column="1" x:Name="lblFolioName"
+                                 HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="Center"
+                            Placeholder="Enter Your Folio Name"
+                                  FontSize="Small"
+                               TextColor="Black">
+
+                    </Entry>
+
+                </Grid>
+            </Frame>
+            
+            <Frame Padding="10,5" HasShadow="True"   CornerRadius="5"  BorderColor="Wheat"  Margin="0,10,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40">
+
+                        </RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30">
+
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="40">
+
+                        </ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Entry Grid.Column="1"  x:Name="lblFolioAmount"
+                                 HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="Center"
+                            Placeholder="Folio Amount"
+                                  FontSize="Small"
+                               TextColor="Black">
+
+                    </Entry>
+
+                </Grid>
+
+            </Frame>
+            <Frame Padding="10,5" HasShadow="True"   CornerRadius="5"  BorderColor="Wheat"  Margin="0,10,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60">
+
+                        </RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30">
+
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="40">
+
+                        </ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Editor  Grid.Column="1"  x:Name="lblYear"
+                                 
+                            Placeholder="Year of Process"
+                                  FontSize="Small"
+                               TextColor="Black">
+                    </Editor>
+                </Grid>
+            </Frame>
+            <Button BackgroundColor="Green" Text="GET PORTFOLIO" VerticalOptions="EndAndExpand" CornerRadius="5" Margin="0,15,0,0" Clicked="GetPortfolio_Clicked"></Button>
+            <Button BackgroundColor="CornflowerBlue" Text="UPDATE FOLIO" VerticalOptions="EndAndExpand" CornerRadius="5" Margin="0,15,0,0" Clicked="UpdatePortfolio_Clicked"></Button>
+                <Label Text="Status" TextColor="Brown" FontSize="Medium" x:Name="lblDone" HorizontalOptions="Center"></Label>
+        </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

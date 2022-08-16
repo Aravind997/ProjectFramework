@@ -1,0 +1,36 @@
+﻿@model AdminViewModel
+@{
+    ViewData["Title"] = "Settings";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading"><h4>Configure Site Settings</h4></div>
+    <div class="panel-body">
+        <form method="post" enctype="multipart/form-data" asp-controller="Admin" asp-action="Settings">
+            <div class="container">
+
+                <div class="form-group">
+                    <label for="txtAppName">Application Name:</label><br />
+                    <input type="text" id="txtAppName" class="form-control" value="@Model.AppName" name="AppName" />
+
+                </div>
+                <div class="form-group">
+                    <label for="txMainHeading">Main Heading:</label><br />
+                    <input type="text" id="txMainHeading" class="form-control" value="@Model.MainHeading" name="MainHeading"/>
+                </div>
+                <div class="form-group">
+                    <label for="txMainDesc">Main Description:</label><br />
+                    <textarea id="txMainDesc" class="form-control" name="MainDesc">@Model.MainDesc</textarea>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" asp-for="IsChecked" id="txEnableMobAuth" name="EnableMobAuth" />
+                    <label for="txEnableMobAuth">Enable Authentication Check for Mobile API Calls</label>
+
+                </div>
+                <input type="submit" value="Update" class="btn btn-primary" /><br /><br />
+                <label> @Model.StatusString </label>
+            </div>
+        </form>
+    </div>
+    </div>
+

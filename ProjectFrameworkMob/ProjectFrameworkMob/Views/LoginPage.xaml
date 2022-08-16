@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewcontents="clr-namespace:ProjectFrameworkMob.ViewContents"
+             mc:Ignorable="d"
+             x:Class="ProjectFrameworkMob.Views.LoginPage"
+           NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <viewcontents:MainHeaderControl x:Name="HeaderControl" IsVisible="true"></viewcontents:MainHeaderControl>
+            <Frame   HasShadow="True"  VerticalOptions="Start" >
+              
+                <StackLayout>
+                    
+                    <Label Text="Hello User "  FontSize="25" Margin="0,40,0,0"  VerticalOptions="Fill" HorizontalOptions="Start" FontAttributes="Bold" FontFamily="Roboto" x:Name="lblHeading" ></Label>
+
+                    <Frame Padding="10,5" HasShadow="True"  BorderColor="DeepSkyBlue" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40">
+
+                                </RowDefinition>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30">
+
+                                </ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="40">
+
+                                </ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="Person.png" Scale="0.6" ></Image>
+                            <Entry Grid.Column="1" x:Name="lblUsername"
+                                 HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="Center"
+                            Placeholder="Enter Username"
+                                  FontSize="Small"
+                               TextColor="Black">
+                                
+                            </Entry>
+                           
+                        </Grid>
+                    </Frame>
+                    <Frame Padding="10,5" HasShadow="True"   CornerRadius="5"  BorderColor="DeepSkyBlue"  Margin="0,10,0,0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40">
+
+                                </RowDefinition>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30">
+
+                                </ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="40">
+
+                                </ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="Lock.png" Scale="0.6" ></Image>
+                            <Entry Grid.Column="1"  x:Name="lblPassword"
+                                 HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="Center"
+                            Placeholder="Enter Password"
+                                  FontSize="Small"
+                               TextColor="Black" IsPassword="True">
+                                
+                            </Entry>
+                        </Grid>
+                    </Frame>
+                    <Button BackgroundColor="Blue" Text="Login" VerticalOptions="EndAndExpand" CornerRadius="5" Margin="0,15,0,0" Clicked="ButtonLogin_Clicked"></Button>
+                    <Label Text="Status" TextColor="Brown" FontSize="Medium" x:Name="lblStatus" HorizontalOptions="Center"></Label>
+                </StackLayout>
+            </Frame >
+            <Frame  CornerRadius="5"  Margin="0,0,0,10">
+                <StackLayout>
+                    <Label Text="Don't Have an Account?  Create One" HorizontalOptions="Center" ></Label>
+                <Button BackgroundColor="Red" Text="SignUp" CornerRadius="5" Clicked="ButtonSignup_Clicked" ></Button>
+                    
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

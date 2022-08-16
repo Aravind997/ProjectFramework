@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:ProjectFrameworkMob.ViewContents"
+             x:Class="ProjectFrameworkMob.ViewContents.MainHeaderControl">
+
+    <Grid x:Name="MenuGrid" IsVisible="false">
+        <Grid VerticalOptions="Fill" HorizontalOptions="Fill"  BackgroundColor="Transparent" ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="80*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <BoxView Grid.ColumnSpan="2" Grid.Column="0" x:Name="MenuOverlay"  Opacity="0.35">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+            <Grid Grid.Column="1" x:Name="MenuView" HorizontalOptions="Fill" VerticalOptions="Fill" WidthRequest="280" BackgroundColor="Transparent">
+                <views:BurgerMenuView />
+            </Grid>
+        </Grid>
+    </Grid>
+
+    <Grid x:Name="MenuHeader" IsVisible="true">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="80*" />
+            <ColumnDefinition Width="10*" />
+        </Grid.ColumnDefinitions>
+                
+        <ImageButton x:Name="BtnMutilaguage" Clicked="BtnMutilaguage_Clicked"  Source="translate.png" Grid.Column="0" Grid.Row="0"  BackgroundColor="#F8F8F8" Aspect="AspectFit" IsVisible="true" />
+        <Label Text="Main Header Control"
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand" x:Name="lblHeading" FontSize="28" FontAttributes="Bold" FontFamily="Roboto" TextColor="Navy" Grid.Column="1" Grid.Row="0" />
+        <ImageButton x:Name="BtnBurgerMenu" Clicked="BtnBurgerMenu_Clicked" Source="burger_menu.png" BackgroundColor="#F8F8F8" Aspect="AspectFit" Grid.Column="2" Grid.Row="0" />
+        
+    </Grid>
+    
+        
+</StackLayout>
+    

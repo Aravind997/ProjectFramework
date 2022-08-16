@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewcontents="clr-namespace:ProjectFrameworkMob.ViewContents"
+             mc:Ignorable="d"
+             x:Class="ProjectFrameworkMob.Views.WebViewPage" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <viewcontents:MainHeaderControl x:Name="HeaderControl" IsVisible="true"></viewcontents:MainHeaderControl>
+            <WebView x:Name="WebViewNavigate" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"   BackgroundColor="#F8F8F8"  Margin="10,10,10,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
